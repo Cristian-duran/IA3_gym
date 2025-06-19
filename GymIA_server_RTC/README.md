@@ -205,7 +205,7 @@ python test_server_syntax.py
 # ✅ Dependencias verificadas
 ```
 
-### 🚀 Instalación Express (Para usuarios con experiencia)
+### Instalación Express (Para usuarios con experiencia)
 
 ```bash
 # Comando todo-en-uno
@@ -410,89 +410,9 @@ Invoke-WebRequest http://localhost:8000/              # Windows PowerShell
 wscat -c ws://localhost:8000/signaling
 ```
 
-### Soluciones Rápidas de Problemas
-
-```bash
-# Error TensorFlow/NumPy
-pip uninstall numpy tensorflow opencv-python keras -y && pip install numpy==1.24.3 tensorflow==2.16.1 opencv-python-headless==4.8.1.78
-
-# Puerto ocupado
-uvicorn app.webrtc_server_optimized:app --host 0.0.0.0 --port 8001
-
-# Modelos no encontrados
-python -c "from ultralytics import YOLO; YOLO('yolo11n-pose.pt')" && mv yolo11n-pose.pt models/
-
-# Reinstalación completa de dependencias
-pip uninstall -r requirements.txt -y && pip install -r requirements.txt
-
-# Matar proceso en puerto 8000
-# Windows
-netstat -ano | findstr :8000
-taskkill /PID <PID> /F
-
-# Linux/macOS
-lsof -ti:8000 | xargs kill -9
-
-# Alto uso de CPU
-export DETECTION_INTERVAL=5 PREDICTION_INTERVAL=8 MAX_WORKERS=1 && uvicorn app.webrtc_server_optimized:app --host 0.0.0.0 --port 8000
-```
-
-### 📊 Monitoreo Express
-
-```bash
-# Información del sistema
-python -c "import sys, platform; print(f'Python: {sys.version}'); print(f'OS: {platform.system()} {platform.release()}')"
-
-# Estado de dependencias
-pip list | grep -E "(tensorflow|ultralytics|opencv|aiortc|fastapi)"
-
-# Verificar modelos
-ls -la models/*.{pt,h5}                               # Linux/macOS
-Get-ChildItem models\*.pt,models\*.h5                 # Windows PowerShell
-
-# Monitoreo de recursos en tiempo real
-# Linux/macOS
-htop
-watch -n 2 'ps aux | grep "webrtc_server" | grep -v grep'
-
-# Windows PowerShell
-while($true) { Get-Process python* | Select Name,CPU,WorkingSet | Format-Table -AutoSize; Start-Sleep 2; Clear-Host }
-```
-
-### Mantenimiento Express
-
-```bash
-# Actualizar dependencias
-pip install --upgrade -r requirements.txt && python test_server_syntax.py
-
-# Limpiar cache Python
-find . -type d -name "__pycache__" -delete            # Linux/macOS
-Get-ChildItem -Path . -Recurse -Name "__pycache__" | Remove-Item -Recurse -Force  # Windows PowerShell
-
-# Reinstalar entorno virtual
-deactivate && rm -rf gymia_env && python -m venv gymia_env && source gymia_env/bin/activate && pip install -r requirements.txt
-
-# Windows equivalente
-deactivate; Remove-Item gymia_env -Recurse -Force; python -m venv gymia_env; gymia_env\Scripts\Activate.ps1; pip install -r requirements.txt
-```
-
-### Checklist Express
-
-```bash
-# Verificación completa en un solo comando
-echo "🔍 Verificando instalación..." && \
-python --version && \
-python test_server_syntax.py && \
-python -c "import tensorflow, ultralytics, cv2, aiortc; print('✅ Dependencias OK')" && \
-ls -la models/ && \
-echo "✅ Todo listo para ejecutar servidor"
-```
-
----
-
 ## Características Destacadas del Proyecto
 
-### 🎯 **Innovación Técnica**
+### **Innovación Técnica**
 - **Análisis en tiempo real** con latencia < 100ms
 - **IA especializada** por tipo de ejercicio
 - **Optimizaciones avanzadas** de rendimiento
