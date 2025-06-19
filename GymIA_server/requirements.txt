@@ -1,7 +1,0 @@
-fastapi
-uvicorn
-ultralytics
-tensorflow
-keras
-opencv-python-headless
-numpy
