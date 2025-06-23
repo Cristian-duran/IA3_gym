@@ -1,5 +1,12 @@
 # 🏋️ GymIA - redes LSTM aplicada a la corrección inteligente de ejercicios de peso muerto y sentadilla en gimnasios 
 
+## 📧 Información de Contacto
+
+- **Autor:** Cristian Alejandro Durán Ignacio
+- **Email:** duran.cristian@usfx.bo
+- **GitHub:** Cristian-duran https://github.com/Cristian-duran
+
+---
 ## Información del Proyecto
 
 - **Estudiante:** Cristian Alejandro Durán Ignacio
@@ -230,4 +237,8 @@ Para problemas específicos:
 3. Asegúrate de que las rutas de los datasets sean correctas
 
 ---
+## 📄 Licencia
 
+Este proyecto está licenciado bajo la **Licencia MIT** - ver el archivo [LICENSE](LICENSE) para más detalles.
+
+*Desarrollado con ❤️ para la comunidad fitness y de investigación en IA*
